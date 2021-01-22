@@ -16,33 +16,42 @@
     </div>
     <div class="menu__external">
         <div class="container-inner">
-            <div class="toggle-container">
-            <input id="toggle" type="checkbox">
-            <label class="toggle-label" for="toggle">
-                <div class="toggle-line first"></div>
-                <div class="toggle-line second"></div>
-                <div class="toggle-line third"></div>
-                <div class="toggle-line fourth"></div>
-                <div class="toggle__text">GAZMENU</div>
-            </label>
-            <div class="substrate"></div>
-
-            <ul class="menu border-menu">
-                <li class="menu__item"><a href="#" class="menu__link">GAZNEWS</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">GAZVIDEO</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">GAZAUDIO</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">GAZFOTO</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">GAZFANS</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">GAZРЕПА</a></li>
-            </ul>
+            <div class="menu-container">
+                <div class="menu-toogle">
+                    <input id="toggle" type="checkbox">
+                    <label class="toggle-label" for="toggle">
+                    <div class="toggle-line">
+                        <div class="toggle-line__line first"></div>
+                        <div class="toggle-line__line second"></div>
+                        <div class="toggle-line__line third"></div>
+                    </div>
+                        <div class="toggle__text">GAZMENU</div>
+                    </label>
+                <ul class="menu border-menu">
+                    <li class="menu__item"><a href="#" class="menu__link">GAZNEWS</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">GAZVIDEO</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">GAZAUDIO</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">GAZFOTO</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">GAZFANS</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">GAZРЕПА</a></li>
+                </ul>
             </div>
+            <a href="index.html" class="menu-logo"><img class="logo-mobile" src="assets/img/logo-mobile.png" alt="на главную"></a>
+            <div class="substrate"></div>
+                <div class="menu-icon">
+                    <svg class="menu-icon__img mail__img" width="20" height="20">
+                        <use xlink:href="sprite.symbol.svg#message"></use>
+                    </svg>
+                    <svg class="menu-icon__img music__img" width="20" height="20">
+                        <use xlink:href="sprite.symbol.svg#music"></use>
+                    </svg>
+                    <svg class="menu-icon__img photo__img" width="20" height="20">
+                        <use xlink:href="sprite.symbol.svg#photo"></use>
+                    </svg>
+                </div>
+            </div>
+         
         </div>
-           <div class="autorization__mobile">
-               
-           </div>
-            
-
-        
     </div>
 </header>
     <div class="container">
