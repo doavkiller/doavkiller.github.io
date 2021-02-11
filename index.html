@@ -36,18 +36,22 @@
                     <li class="menu__item"><a href="#" class="menu__link">GAZРЕПА</a></li>
                 </ul>
             </div>
-            <a href="index.html" class="menu-logo"><img class="logo-mobile" src="assets/img/logo-mobile.png" alt="на главную"></a>
+            <a href="index.html" class="menu-logo visiabilyty-hidden"><img class="logo-mobile" src="assets/img/logo-mobile.png" alt="на главную"></a>
             <div class="substrate"></div>
-                <div class="menu-icon">
+                <div class="menu-icon visiabilyty-hidden">
+                    <a href="#">
                     <svg class="menu-icon__img mail__img" width="20" height="20">
                         <use xlink:href="sprite.symbol.svg#message"></use>
-                    </svg>
+                    </svg></a>
+                    <a href="#">
                     <svg class="menu-icon__img music__img" width="20" height="20">
                         <use xlink:href="sprite.symbol.svg#music"></use>
-                    </svg>
+                    </svg></a>
+                    <a href="#">
                     <svg class="menu-icon__img photo__img" width="20" height="20">
                         <use xlink:href="sprite.symbol.svg#photo"></use>
                     </svg>
+                </a>
                 </div>
             </div>
          
@@ -56,8 +60,16 @@
 </header>
     <div class="container">
         <div class="wrapper">
-            <aside class="sidebar">
-
+            
+<aside class="sidebar">
+    <div class="container-test">
+        <input type="checkbox" id="sidebar-toggle">
+        <label for="sidebar-toggle" class="sidebar__toggle-label">
+        <svg class="sidebar__toggle-icon arrow-right" width="20" height="20">
+            <use xlink:href="sprite.symbol.svg#arrow-right"></use>
+        </svg>
+        </label>
+       
     <div class="autorization autorization-active">
         <p class="autorization__info">Вы не авторизированы на сайте</p>
         <button class="autorization__btn">Вход</button>
@@ -72,7 +84,6 @@
         <button class="autorization__btn">Профиль</button>
         <button class="autorization__btn">Сообщения</button>
     </div>
-
     <section class="sidebar__section last-video">
         <h3 class="last-video__title title">Последнее видео:</h3>
         <div class="last-video__content">
@@ -153,7 +164,7 @@
                 </a></li>
         </ul>
     </section>
-
+</div>
 </aside>
                 <main class="main">
     <article class="news">
