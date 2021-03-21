@@ -69,20 +69,73 @@
         <div class="wrapper">
             
 <aside class="sidebar">
-    <div class="autorization visiabilyty-hidden">
-        <p class="autorization__info">Вы не авторизированы на сайте</p>
-        <button class="autorization__btn">Вход</button>
-        <button class="autorization__btn">Регистрация</button>
+        <div class="autorization visiabilyty-hidden">
+    <p class="autorization__info">Вы не авторизированы на сайте</p>
+    <button class="autorization__btn">Вход</button>
+    <button class="autorization__btn">Регистрация</button>
+
+    <div class="login-menu visiabilyty-hidden">
+        <form action="" method="post" class="login-form">
+            <label for="login" class="login-form__text">
+                Ваше имя
+            </label>
+            <input class="login-form__input" id="login" type="text" placeholder="Ваше имя">
+            <label for="password" class="login-form__text">
+                Ваш пароль
+            </label>
+            <input class="login-form__input" id="password" type="password" placeholder="Ваш пароль">
+            <label for="remember" class="login-form__checkbox">Запомнить меня
+            </label>
+            <input class="login-form__input-checkbox" id="remember" type="checkbox" title="запомнить меня">
+            <button class="login-form__btn" type="submit" >Войти</button>
+        </form>
+        <div class="login-menu__links">
+            <a href="#" class="login-menu__link">Забыли пароль?</a>
+            <a href="#" class="login-menu__link">Регистрация</a>
+        </div>
+        
     </div>
 
-    <div class="autorization autorization-active">
-        <p class="autorization__info">Добро пожаловать <a href="#" class="autorization__name">admin</a></p>
-        <div class="autorization__avatar avatar">
-            <img class="avatar__img" src='assets/img/admin.jpg' alt='Аватар' width="50">
+    <div class="login-menu reestablish visiabilyty-hidden">
+        <form action="" method="post" class="login-form">
+            <label for="login" class="login-form__text reestablish__text">
+                Номер телефона
+            </label>
+            <input class="login-form__input reestablish__input" id="login" type="tel" placeholder="+7 (999)999-99-99">
+            <label for="password" class="login-form__text reestablish__text">
+                Ваш email
+            </label>
+            <input class="login-form__input reestablish__input" id="password" type="mail" placeholder="example@mail.ru">
+            <button class="login-form__btn reestablish__btn" type="submit" >Востановить пароль</button>
+        </form>
+        <div class="login-menu__links">
+            <a href="#" class="login-menu__link">Еще не зарегистрированы?</a>
         </div>
-        <button class="autorization__btn">Профиль</button>
-        <button class="autorization__btn">Сообщения</button>
+        
     </div>
+    <button class="autorization-backspace visiabilyty-hidden">
+        <svg class="autorization-backspace__img backspace" width="20" height="20">
+            <use xlink:href="sprite.symbol.svg#backspace"></use>
+        </svg>
+    </button>
+</div>
+
+<div class="autorization autorization-active">
+    <p class="autorization__info">Добро пожаловать <a href="#" class="autorization__name">admin</a></p>
+    <a href="#" class="autorization__exit exit" title="Покинуть сайт">
+        <svg class="exit__icon exit" width="30" height="30">
+            <use xlink:href="sprite.symbol.svg#exit"></use>
+        </svg>
+    </a>
+    <div class="autorization__avatar avatar">
+        <img class="avatar__img" src='assets/img/admin.jpg' alt='Аватар' width="50">
+    </div>
+
+    <button class="autorization__btn">Профиль</button>
+    <button class="autorization__btn">Сообщения</button>
+
+</div>
+        
     <section class="sidebar__section last-video">
         <h3 class="last-video__title title">Последнее видео:</h3>
         <div class="last-video__content">
@@ -100,7 +153,6 @@
             творчество.
         </p>
     </section>
-
 
     <section class="sidebar__section alboms">
         <h3 class="alboms__title title">Альбомы</h3>
@@ -170,12 +222,69 @@
         </ul>
     </section>
 </aside>
+            
                 <main class="main">
+    <div class="filters-watcher">
+    <button class="filters-watcher__btn">Показать фильтры</button>
+<div class="filters visiabilyty-hidden">
+    <button class="filters__backspace">
+        <svg class="filters-backspace__img backspace" width="20" height="20">
+            <use xlink:href="sprite.symbol.svg#backspace"></use>
+        </svg>
+    </button>
+    <div class="breadcrumbs visiabilyty-hidden">
+        <div class="select__wrapper">
+        <select class="filters__select" size="1">
+            <option value="1">категория</option>
+            <option value="1">музыка</option>
+            <option value="2">концерт</option>
+            <option value="2">видео</option>
+        </select>
+    </div>
+    </div>
+    <div class="category">
+        <div class="select__wrapper">
+        <select class="filters__select" placeholder="категория" size="1">
+            <option selected disabled>категория</option>
+            <option value="1">музыка</option>
+            <option value="2">концерт</option>
+            <option value="2">видео</option>
+        </select>
+    </div>
+    </div>
+    <div class="sorting">
+        <div class="select__wrapper">
+        <select class="filters__select" size="1" name="сортировка">
+            <option selected disabled>сортировка</option>
+            <option value="1">дате</option>
+            <option value="2">популярности</option>
+            <option value="2">рейтингу</option>
+        </select>
+    </div>
+    </div>
+    <button class="search">
+        <input class="search__input" type="search" placeholder="найти...">
+        <svg class="search__img" width="20" height="20">
+            <use xlink:href="sprite.symbol.svg#search"></use>
+        </svg>
+    </button>
+    <div class="buttons">
+        <button class="buttons__apply">Применить</button>
+    </div>
+</div>
+</div>
     <article class="news">
     <div class="news__container">
         <h2 class="news__title">
             <a class="title__link" href="pages/full-news.html">
                 GAZENSUP спели о загубленном детстве</a></h2>
+                <div class="news__views" title="просмотров">
+                    <svg class="eye__img" width="20" height="20">
+                        <use xlink:href=
+                        "sprite.symbol.svg#eye"></use>
+                    </svg>
+                    <p>35</p>
+                </div>
         <ul class="news__info">
             <li class="name">
                 <svg class="name__img" width="20" height="20">
@@ -239,6 +348,14 @@
                     <use xlink:href=
                     "sprite.symbol.svg#like"></use>
                 </svg>25</button>
+            </div>
+            <div class="comments">
+                
+                <button class="comments__btn">
+                    <svg class="comments__img" width="20" height="20">
+                    <use xlink:href=
+                    "sprite.symbol.svg#chat"></use>
+                </svg>5</button>
             </div>
             <div class="share">
                 
@@ -255,6 +372,13 @@
         <h2 class="news__title">
             <a class="title__link" href="pages/full-news.html">
                 GAZENSUP спели о загубленном детстве</a></h2>
+                <div class="news__views" title="просмотров">
+                    <svg class="eye__img" width="20" height="20">
+                        <use xlink:href=
+                        "sprite.symbol.svg#eye"></use>
+                    </svg>
+                    <p>35</p>
+                </div>
         <ul class="news__info">
             <li class="name">
                 <svg class="name__img" width="20" height="20">
@@ -318,6 +442,14 @@
                     <use xlink:href=
                     "sprite.symbol.svg#like"></use>
                 </svg>25</button>
+            </div>
+            <div class="comments">
+                
+                <button class="comments__btn">
+                    <svg class="comments__img" width="20" height="20">
+                    <use xlink:href=
+                    "sprite.symbol.svg#chat"></use>
+                </svg>5</button>
             </div>
             <div class="share">
                 
@@ -334,6 +466,13 @@
         <h2 class="news__title">
             <a class="title__link" href="pages/full-news.html">
                 GAZENSUP спели о загубленном детстве</a></h2>
+                <div class="news__views" title="просмотров">
+                    <svg class="eye__img" width="20" height="20">
+                        <use xlink:href=
+                        "sprite.symbol.svg#eye"></use>
+                    </svg>
+                    <p>35</p>
+                </div>
         <ul class="news__info">
             <li class="name">
                 <svg class="name__img" width="20" height="20">
@@ -397,6 +536,14 @@
                     <use xlink:href=
                     "sprite.symbol.svg#like"></use>
                 </svg>25</button>
+            </div>
+            <div class="comments">
+                
+                <button class="comments__btn">
+                    <svg class="comments__img" width="20" height="20">
+                    <use xlink:href=
+                    "sprite.symbol.svg#chat"></use>
+                </svg>5</button>
             </div>
             <div class="share">
                 
